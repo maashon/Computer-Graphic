@@ -1,0 +1,5 @@
+﻿  MyApp.cpp
+E:\computer graphics\sessoin 27 april\03_Shadows\03_Shadows\MyApp.cpp(63,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\computer graphics\sessoin 27 april\03_Shadows\03_Shadows\MyApp.cpp(118,96): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+E:\computer graphics\sessoin 27 april\03_Shadows\03_Shadows\MyApp.cpp(165,45): warning C4312: 'type cast': conversion from 'GLuint' to 'ImTextureID' of greater size
+  03_Shadows.vcxproj -> E:\computer graphics\sessoin 27 april\03_Shadows\x64\Debug\03_Shadows.exe
