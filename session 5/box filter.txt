@@ -1,0 +1,20 @@
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+    const int k=2;
+    
+    
+    for (int i=-k;i<k+1;i++){
+    for (int j=-k;j<k+1;j++){
+    
+    
+    fragColor += texelFetch(iChannel0,ivec2(fragCoord+vec2(i,j)),0);
+    
+    
+    }
+    
+    
+    
+    
+    }
+    fragColor/=float(((k*2)+1)*((k*2)+1));
+}
