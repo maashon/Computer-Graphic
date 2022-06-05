@@ -47,10 +47,10 @@ bool CMyApp::Init()
 	m_vao.SetIndices(indices);
 	m_vao.Unbind();
 
-	// Loading mesh
+	// Loading texture
 	m_textureMetal.FromFile("Assets/texture.png");
 
-	// Loading texture
+	// Loading mesh
 	m_mesh = ObjParser::parse("Assets/Suzanne.obj");
 
 	// Camera
@@ -154,13 +154,18 @@ void CMyApp::Render()
 	// 2.3. Draw point lights
 
 	m_deferredPointlight.SetUniform("lightPos", m_light_pos);
-	m_deferredPointlight.SetUniform("Ld", glm::vec4(1,0.8,0.5,1));
-	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4); // First light
+	m_deferredPointlight.SetUniform("Ld", glm::vec4(1,0.0,0.0,1));
+	(GL_TRIANGLE_STRIP, 0, 4); // First light
+
+	
 	
 	float t = SDL_GetTicks() / 1000.f;
 	m_deferredPointlight.SetUniform("lightPos", 10.f*glm::vec3(cosf(t),0.5,sinf(t)));
-	m_deferredPointlight.SetUniform("Ld", glm::vec4(0.5, 1, 1, 1));
+	m_deferredPointlight.SetUniform("Ld", glm::vec4(0.0, 1, 0.0, 1));
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4); // Second light
+
+
+
 
 	// 2.4. Undo the blending options
 
